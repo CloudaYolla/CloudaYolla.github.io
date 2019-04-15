@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Overview on AWS Turkey Builders Day</title>
+    <link>http://example.org/overview/</link>
+    <description>Recent content in Overview on AWS Turkey Builders Day</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 29 Mar 2019 17:33:15 +0300</lastBuildDate>
+    
+	<atom:link href="http://example.org/overview/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Prerequisites</title>
+      <link>http://example.org/overview/prerequisites/</link>
+      <pubDate>Fri, 29 Mar 2019 17:39:55 +0300</pubDate>
+      
+      <guid>http://example.org/overview/prerequisites/</guid>
+      <description>Preparing Cloud Environment Your first lab will focus on preparing your cloud environment and will take around 10 minutes. You need to complete this first lab, otherwise it might be harder for you to complete the following labs.
+Services that you will be using in this lab:
+AWS Account  AWS Identity and Access Management (IAM) - AWS Identity and Access Management (IAM) enables you to manage access to AWS services and resources securely.</description>
+    </item>
+    
+    <item>
+      <title>Expected Costs</title>
+      <link>http://example.org/overview/costs/</link>
+      <pubDate>Fri, 29 Mar 2019 17:44:22 +0300</pubDate>
+      
+      <guid>http://example.org/overview/costs/</guid>
+      <description>You are responsible for the cost of the AWS services used while running this lab. As of the date of publication, the baseline cost for running this solution as-is should be around:
+ S3 &amp;lt; 1$ [TBD]  Important note:
+Cost Management advice: Whenever you are creating a cloud resource, tag it. Try setting following tag fields during the labs: project: serverlessdatalake costcenter: awsimmersionday</description>
+    </item>
+    
+    <item>
+      <title>Cleanup</title>
+      <link>http://example.org/overview/cleanup/</link>
+      <pubDate>Fri, 29 Mar 2019 18:08:37 +0300</pubDate>
+      
+      <guid>http://example.org/overview/cleanup/</guid>
+      <description>Make sure you terminate the resources below to avoid bills.</description>
+    </item>
+    
+  </channel>
+</rss>
