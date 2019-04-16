@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://cloudayolla.github.io/lab-ml/iot/</loc>
+    <lastmod>2019-04-15T17:58:18+03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://cloudayolla.github.io/lab-foundations/serverless-static-site/</loc>
     <lastmod>2019-03-29T17:57:38+03:00</lastmod>
   </url>
@@ -58,6 +63,11 @@
   </url>
   
   <url>
+    <loc>https://cloudayolla.github.io/lab-wa/costmon/</loc>
+    <lastmod>2019-04-15T17:58:18+03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://cloudayolla.github.io/lab-wa/</loc>
     <lastmod>2019-04-15T17:52:43+03:00</lastmod>
   </url>
@@ -69,7 +79,7 @@
   
   <url>
     <loc>https://cloudayolla.github.io/overview/cleanup/</loc>
-    <lastmod>2019-03-29T18:08:37+03:00</lastmod>
+    <lastmod>2019-03-29T17:39:55+03:00</lastmod>
   </url>
   
   <url>

@@ -12,19 +12,19 @@
     <title>Deploying a Scalable Web Application to Production :: AWS Turkey Builders Day</title>
 
     
-    <link href="/css/nucleus.css?1555418337" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1555418337" rel="stylesheet">
-    <link href="/css/hybrid.css?1555418337" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1555418337" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1555418337" rel="stylesheet">
-    <link href="/css/auto-complete.css?1555418337" rel="stylesheet">
-    <link href="/css/theme.css?1555418337" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1555418337" rel="stylesheet">
+    <link href="/css/nucleus.css?1555439488" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1555439488" rel="stylesheet">
+    <link href="/css/hybrid.css?1555439488" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1555439488" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1555439488" rel="stylesheet">
+    <link href="/css/auto-complete.css?1555439488" rel="stylesheet">
+    <link href="/css/theme.css?1555439488" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1555439488" rel="stylesheet">
     
-      <link href="/css/theme-mine.css?1555418337" rel="stylesheet">
+      <link href="/css/theme-mine.css?1555439488" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1555418337"></script>
+    <script src="/js/jquery-2.x.min.js?1555439488"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -53,14 +53,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1555418337"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1555418337"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1555439488"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1555439488"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/cloudayolla.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1555418337"></script>
+<script type="text/javascript" src="/js/search.js?1555439488"></script>
 
     
   </div>
@@ -139,9 +139,9 @@
  
   
     
-      <li data-nav-id="/overview/cleanup/" title="Cleanup" class="dd-item ">
+      <li data-nav-id="/overview/cleanup/" title="Cleaning up Resources You&#39;ve Created" class="dd-item ">
         <a href="/overview/cleanup/">
-        Cleanup
+        Cleaning up Resources You&#39;ve Created
         
         </a>
     </li>
@@ -329,6 +329,25 @@
 
             
           
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/lab-wa/costmon/" title="Cost Explorer for understanding and managing costs" class="dd-item ">
+        <a href="/lab-wa/costmon/">
+        Cost Explorer for understanding and managing costs
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -368,9 +387,28 @@
  
   
     
-      <li data-nav-id="/lab-ml/ml/" title="Train Machine Learning Model for Digit Recognition" class="dd-item ">
+      <li data-nav-id="/lab-ml/iot/" title="Serverless IoT Communication" class="dd-item ">
+        <a href="/lab-ml/iot/">
+        Serverless IoT Communication
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/lab-ml/ml/" title="ML for Neural Networks based Handwriting Recognition" class="dd-item ">
         <a href="/lab-ml/ml/">
-        Train Machine Learning Model for Digit Recognition
+        ML for Neural Networks based Handwriting Recognition
         
         </a>
     </li>
@@ -524,7 +562,7 @@
 
 <h2 id="lab-prerequisites">Lab Prerequisites</h2>
 
-<p>You need to finish the previous lab <img src="/overview/ci-cd-eb/" alt="Developing and Deploying Applications" />.</p>
+<p>You need to finish the previous lab <a href="/overview/ci-cd-eb/">Developing and Deploying Applications</a>.</p>
 
 <h2 id="expected-costs">Expected Costs</h2>
 
@@ -541,29 +579,27 @@
 
 <p><img src="/images/labwa/eb2prod1.png" alt="EB" /></p></li>
 
-<li><p>Go to the new prod environment. Select &lsquo;Configuration&rsquo; from the left menu and do the following modifications:</p>
+<li><p>Go to the new prod environment. Select &lsquo;Configuration&rsquo; from the left menu and do the following modifications:</p></li>
 
-<ul>
-<li>Capacity Section:
+<li><p>In the &lsquo;Configuration&rsquo; section check each section &amp; try to understand options with the instructor.</p></li>
 
-<ul>
-<li>Auto Scaling Group: Change <code>Single Instance</code> to <code>Load Balanced</code></li>
-<li>Instances Min / Max : <code>Min: 1 - Max: 2</code></li>
-<li>Select Triggers:
+<li><p>Also check especially the <code>Rolling Updates &amp; deployments section</code>. What are the deployment options? (Hing: All at once, blue/green, rolling &hellip; )</p></li>
 
-<ul>
-<li>Metric: <code>CPU Utilization</code></li>
-<li>Statistic: <code>Average</code></li>
-<li>Unit: <code>Percent</code></li>
-<li>Period: 2</li>
-<li>Break duration: 2</li>
-<li>Upper threshold: 70</li>
-<li>Scale up increment: +1</li>
-<li>Lower threshold: 10</li>
-<li>Scale up increment: -1</li>
-</ul></li>
-</ul></li>
-</ul>
+<li><p>Modify the Capacity Section as follows (when finished, press Continue):</p>
+
+<pre><code>- Auto Scaling Group: Change `Single Instance` to `Load Balanced`
+- Instances Min / Max : `Min: 1 - Max: 2`
+- Select Triggers: 
+    - Metric: `CPU Utilization`
+    - Statistic: `Average`
+    - Unit: `Percent`
+    - Period: 2
+    - Break duration: 2 
+    - Upper threshold: 70
+    - Scale up increment: +1
+    - Lower threshold: 10
+    - Scale up increment: -1
+</code></pre>
 
 <p><img src="/images/labwa/eb2prod21.png" alt="EB" /></p>
 
@@ -858,6 +894,25 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -866,8 +921,18 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
                         
-                        
+            
+            
+                
                     
                 
                 
@@ -876,6 +941,9 @@
                     
                     
 
+                    
+            
+        
                     
                         
             
@@ -908,7 +976,7 @@
 			<a class="nav nav-prev" href="/lab-wa/ci-cd-eb/" title="Developing and Deploying Applications"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/lab-ml/" title="Lab Module 4: Machine Learning in Practice" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/lab-wa/costmon/" title="Cost Explorer for understanding and managing costs" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -918,20 +986,20 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1555418337"></script>
-    <script src="/js/perfect-scrollbar.min.js?1555418337"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1555418337"></script>
-    <script src="/js/jquery.sticky.js?1555418337"></script>
-    <script src="/js/featherlight.min.js?1555418337"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1555418337"></script>
-    <script src="/js/highlight.pack.js?1555418337"></script>
+    <script src="/js/clipboard.min.js?1555439488"></script>
+    <script src="/js/perfect-scrollbar.min.js?1555439488"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1555439488"></script>
+    <script src="/js/jquery.sticky.js?1555439488"></script>
+    <script src="/js/featherlight.min.js?1555439488"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1555439488"></script>
+    <script src="/js/highlight.pack.js?1555439488"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1555418337"></script>
-    <script src="/js/learn.js?1555418337"></script>
-    <script src="/js/hugo-learn.js?1555418337"></script>
+    <script src="/js/modernizr.custom.71422.js?1555439488"></script>
+    <script src="/js/learn.js?1555439488"></script>
+    <script src="/js/hugo-learn.js?1555439488"></script>
 
-    <link href="/mermaid/mermaid.css?1555418337" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1555418337"></script>
+    <link href="/mermaid/mermaid.css?1555439488" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1555439488"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

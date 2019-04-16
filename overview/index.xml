@@ -28,18 +28,20 @@ AWS Account  AWS Identity and Access Management (IAM) - AWS Identity and Access 
       <pubDate>Fri, 29 Mar 2019 17:44:22 +0300</pubDate>
       
       <guid>https://cloudayolla.github.io/overview/costs/</guid>
-      <description>You are responsible for the cost of the AWS services used while running this lab. As of the date of publication, the baseline cost for running this solution as-is should be around:
- S3 &amp;lt; 1$ [TBD]  Important note:
-Cost Management advice: Whenever you are creating a cloud resource, tag it. Try setting following tag fields during the labs: project: serverlessdatalake costcenter: awsimmersionday</description>
+      <description>Understanding Free Tier Watch this 3 minute Knowledge center video from AWS: https://www.youtube.com/watch?v=rkKvzCskpLE
+Expected Costs You are responsible for the cost of the AWS services used while running this lab. As of the date of publication, the baseline cost for running this solution as-is should be around 2-5 USD depending if you are not free tier eligible:
+Tagging Cost Management advice: Whenever you are creating a cloud resource, tag it.</description>
     </item>
     
     <item>
-      <title>Cleanup</title>
+      <title>Cleaning up Resources You&#39;ve Created</title>
       <link>https://cloudayolla.github.io/overview/cleanup/</link>
-      <pubDate>Fri, 29 Mar 2019 18:08:37 +0300</pubDate>
+      <pubDate>Fri, 29 Mar 2019 17:39:55 +0300</pubDate>
       
       <guid>https://cloudayolla.github.io/overview/cleanup/</guid>
-      <description>Make sure you terminate the resources below to avoid bills.</description>
+      <description>Congratulations, you have managed to complete all the labs! This was intensive, but now we need to make sure that we clean-up our cloud account. This should take approximately 5 minutes, and ensures on-going costs are not incurred.
+Below is a reminder if you haven&amp;rsquo;t terminated the resources. Perform the steps below, in the order that they are written.
+ML Module  Open the Amazon SageMaker service Open the Notebook tab and select your notebook.</description>
     </item>
     
   </channel>

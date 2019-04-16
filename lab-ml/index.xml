@@ -12,7 +12,17 @@
     
     
     <item>
-      <title>Train Machine Learning Model for Digit Recognition</title>
+      <title>Serverless IoT Communication</title>
+      <link>https://cloudayolla.github.io/lab-ml/iot/</link>
+      <pubDate>Mon, 15 Apr 2019 17:58:18 +0300</pubDate>
+      
+      <guid>https://cloudayolla.github.io/lab-ml/iot/</guid>
+      <description>Objectives Create an IoT thing and start communicating with it.
+Services Used in this Lab:  AWS IoT Core is a managed cloud service that lets connected devices easily and securely interact with cloud applications and other devices. AWS IoT Core can support billions of devices and trillions of messages, and can process and route those messages to AWS endpoints and to other devices reliably and securely. With AWS IoT Core, your applications can keep track of and communicate with all your devices, all the time, even when they aren’t connected.</description>
+    </item>
+    
+    <item>
+      <title>ML for Neural Networks based Handwriting Recognition</title>
       <link>https://cloudayolla.github.io/lab-ml/ml/</link>
       <pubDate>Mon, 15 Apr 2019 17:58:18 +0300</pubDate>
       

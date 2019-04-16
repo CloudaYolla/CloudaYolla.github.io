@@ -33,5 +33,15 @@ Services Used in this Lab:  AWS Elastic Beanstalk is an easy-to-use service for 
  Upload your code and Elastic Beanstalk automatically handles the deployment, from capacity provisioning, load balancing, auto-scaling to application health monitoring.</description>
     </item>
     
+    <item>
+      <title>Cost Explorer for understanding and managing costs</title>
+      <link>https://cloudayolla.github.io/lab-wa/costmon/</link>
+      <pubDate>Mon, 15 Apr 2019 17:58:18 +0300</pubDate>
+      
+      <guid>https://cloudayolla.github.io/lab-wa/costmon/</guid>
+      <description>Objectives In this lab you will quickly develop, build, and deploy an applications on AWS.
+Services Used in this Lab:  AWS Cost Explorer has an easy-to-use interface that lets you visualize, understand, and manage your AWS costs and usage over time. Get started quickly by creating custom reports (including charts and tabular data) that analyze cost and usage data, both at a high level (e.g., total costs and usage across all accounts) and for highly-specific requests (e.</description>
+    </item>
+    
   </channel>
 </rss>

@@ -9,22 +9,22 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Cleanup :: AWS Turkey Builders Day</title>
+    <title>Cleaning up Resources You&#39;ve Created :: AWS Turkey Builders Day</title>
 
     
-    <link href="/css/nucleus.css?1555418337" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1555418337" rel="stylesheet">
-    <link href="/css/hybrid.css?1555418337" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1555418337" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1555418337" rel="stylesheet">
-    <link href="/css/auto-complete.css?1555418337" rel="stylesheet">
-    <link href="/css/theme.css?1555418337" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1555418337" rel="stylesheet">
+    <link href="/css/nucleus.css?1555439488" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1555439488" rel="stylesheet">
+    <link href="/css/hybrid.css?1555439488" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1555439488" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1555439488" rel="stylesheet">
+    <link href="/css/auto-complete.css?1555439488" rel="stylesheet">
+    <link href="/css/theme.css?1555439488" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1555439488" rel="stylesheet">
     
-      <link href="/css/theme-mine.css?1555418337" rel="stylesheet">
+      <link href="/css/theme-mine.css?1555439488" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1555418337"></script>
+    <script src="/js/jquery-2.x.min.js?1555439488"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -53,14 +53,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1555418337"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1555418337"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1555439488"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1555439488"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/cloudayolla.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1555418337"></script>
+<script type="text/javascript" src="/js/search.js?1555439488"></script>
 
     
   </div>
@@ -139,9 +139,9 @@
  
   
     
-      <li data-nav-id="/overview/cleanup/" title="Cleanup" class="dd-item active">
+      <li data-nav-id="/overview/cleanup/" title="Cleaning up Resources You&#39;ve Created" class="dd-item active">
         <a href="/overview/cleanup/">
-        Cleanup
+        Cleaning up Resources You&#39;ve Created
         
         </a>
     </li>
@@ -329,6 +329,25 @@
 
             
           
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/lab-wa/costmon/" title="Cost Explorer for understanding and managing costs" class="dd-item ">
+        <a href="/lab-wa/costmon/">
+        Cost Explorer for understanding and managing costs
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -368,9 +387,28 @@
  
   
     
-      <li data-nav-id="/lab-ml/ml/" title="Train Machine Learning Model for Digit Recognition" class="dd-item ">
+      <li data-nav-id="/lab-ml/iot/" title="Serverless IoT Communication" class="dd-item ">
+        <a href="/lab-ml/iot/">
+        Serverless IoT Communication
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/lab-ml/ml/" title="ML for Neural Networks based Handwriting Recognition" class="dd-item ">
         <a href="/lab-ml/ml/">
-        Train Machine Learning Model for Digit Recognition
+        ML for Neural Networks based Handwriting Recognition
         
         </a>
     </li>
@@ -452,7 +490,7 @@
             
           
           
-            <a href='/'>Overview</a> > <a href='/overview/'>Overview</a> > Cleanup
+            <a href='/'>Overview</a> > <a href='/overview/'>Overview</a> > Cleaning up Resources You've Created
           
          
           
@@ -465,7 +503,16 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#ml-module">ML Module</a></li>
+<li><a href="#foundation-services">Foundation Services</a></li>
+<li><a href="#preparing-cloud-environment">Preparing Cloud Environment.</a></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -481,7 +528,7 @@
           
             <h1>
               
-              Cleanup
+              Cleaning up Resources You&#39;ve Created
             </h1>
           
 
@@ -489,7 +536,39 @@
 
 
 
-<p>Make sure you terminate the resources below to avoid bills.</p>
+
+
+<p>Congratulations, you have managed to complete all the labs! This was intensive, but now we need to make sure that we clean-up our cloud account. This should take approximately 5 minutes, and ensures on-going costs are not incurred.</p>
+
+<p>Below is a reminder if you haven&rsquo;t terminated the resources. Perform the steps below, in the order that they are written.</p>
+
+<h2 id="ml-module">ML Module</h2>
+
+<ol>
+<li>Open the Amazon SageMaker service</li>
+<li>Open the Notebook tab and select your notebook. Terminate it.</li>
+<li>In the Models tab, delete the model which you have created in your lab.</li>
+<li>In the Endpoints configuration tab, delete configurations which are present. In the Endpoints tab, delete the endpoint.</li>
+</ol>
+
+<h2 id="foundation-services">Foundation Services</h2>
+
+<ol>
+<li>Open the CodeStar service and delete your project.</li>
+<li>Open Cloud9 and delete your environment</li>
+<li>Open EB and delete the production environment you&rsquo;ve created.</li>
+<li>Open DynamoDB and delete the table you&rsquo;ve created</li>
+<li>Open RDS and delete the instance you&rsquo;ve created.</li>
+</ol>
+
+<h2 id="preparing-cloud-environment">Preparing Cloud Environment.</h2>
+
+<ol>
+<li>Open the Cloud9 service and delete your environment.</li>
+<li>Open the EC2 service and delete all remaining EC2 instances.</li>
+<li>In the EC2 service, go to Keys tab and delete your key.</li>
+<li>Open the IAM service and then the users tab - you should delete the ide_user user. Open the Roles tab and delete roles that you have created.</li>
+</ol>
 
 
 <footer class=" footline" >
@@ -720,6 +799,22 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -735,6 +830,22 @@
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -777,20 +888,20 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1555418337"></script>
-    <script src="/js/perfect-scrollbar.min.js?1555418337"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1555418337"></script>
-    <script src="/js/jquery.sticky.js?1555418337"></script>
-    <script src="/js/featherlight.min.js?1555418337"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1555418337"></script>
-    <script src="/js/highlight.pack.js?1555418337"></script>
+    <script src="/js/clipboard.min.js?1555439488"></script>
+    <script src="/js/perfect-scrollbar.min.js?1555439488"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1555439488"></script>
+    <script src="/js/jquery.sticky.js?1555439488"></script>
+    <script src="/js/featherlight.min.js?1555439488"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1555439488"></script>
+    <script src="/js/highlight.pack.js?1555439488"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1555418337"></script>
-    <script src="/js/learn.js?1555418337"></script>
-    <script src="/js/hugo-learn.js?1555418337"></script>
+    <script src="/js/modernizr.custom.71422.js?1555439488"></script>
+    <script src="/js/learn.js?1555439488"></script>
+    <script src="/js/hugo-learn.js?1555439488"></script>
 
-    <link href="/mermaid/mermaid.css?1555418337" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1555418337"></script>
+    <link href="/mermaid/mermaid.css?1555439488" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1555439488"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

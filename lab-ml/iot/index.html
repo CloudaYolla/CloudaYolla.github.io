@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Expected Costs :: AWS Turkey Builders Day</title>
+    <title>Serverless IoT Communication :: AWS Turkey Builders Day</title>
 
     
     <link href="/css/nucleus.css?1555439488" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/overview/costs/">
+  <body class="" data-url="/lab-ml/iot/">
     <nav id="sidebar" class="">
 
 
@@ -77,7 +77,7 @@
   
     
     <li data-nav-id="/overview/" title="Overview" class="dd-item 
-        parent
+        
         
         
         ">
@@ -120,7 +120,7 @@
  
   
     
-      <li data-nav-id="/overview/costs/" title="Expected Costs" class="dd-item active">
+      <li data-nav-id="/overview/costs/" title="Expected Costs" class="dd-item ">
         <a href="/overview/costs/">
         Expected Costs
         
@@ -363,7 +363,7 @@
   
     
     <li data-nav-id="/lab-ml/" title="Lab Module 4: Machine Learning in Practice" class="dd-item 
-        
+        parent
         
         
         ">
@@ -387,7 +387,7 @@
  
   
     
-      <li data-nav-id="/lab-ml/iot/" title="Serverless IoT Communication" class="dd-item ">
+      <li data-nav-id="/lab-ml/iot/" title="Serverless IoT Communication" class="dd-item active">
         <a href="/lab-ml/iot/">
         Serverless IoT Communication
         
@@ -490,7 +490,7 @@
             
           
           
-            <a href='/'>Overview</a> > <a href='/overview/'>Overview</a> > Expected Costs
+            <a href='/'>Overview</a> > <a href='/lab-ml/'>Lab Module 4: Machine Learning in Practice</a> > Serverless IoT Communication
           
          
           
@@ -507,9 +507,14 @@
 <ul>
 <li>
 <ul>
-<li><a href="#understanding-free-tier">Understanding Free Tier</a></li>
+<li><a href="#objectives">Objectives</a></li>
+<li><a href="#services-used-in-this-lab">Services Used in this Lab:</a></li>
+<li><a href="#concepts-used-in-the-lab">Concepts Used in the lab</a></li>
+<li><a href="#lab-prerequisites">Lab Prerequisites</a></li>
 <li><a href="#expected-costs">Expected Costs</a></li>
-<li><a href="#tagging">Tagging</a></li>
+<li><a href="#lab-steps">Lab Steps</a></li>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#deleting-lab-resources">Deleting Lab Resources</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -528,7 +533,7 @@
           
             <h1>
               
-              Expected Costs
+              Serverless IoT Communication
             </h1>
           
 
@@ -538,19 +543,113 @@
 
 
 
-<h2 id="understanding-free-tier">Understanding Free Tier</h2>
+<h2 id="objectives">Objectives</h2>
 
-<p>Watch this 3 minute Knowledge center video from AWS: <a href="https://www.youtube.com/watch?v=rkKvzCskpLE">https://www.youtube.com/watch?v=rkKvzCskpLE</a></p>
+<p>Create an IoT thing and start communicating with it.</p>
+
+<h2 id="services-used-in-this-lab">Services Used in this Lab:</h2>
+
+<ul>
+<li><em>AWS IoT Core</em> is a managed cloud service that lets connected devices easily and securely interact with cloud applications and other devices. AWS IoT Core can support billions of devices and trillions of messages, and can process and route those messages to AWS endpoints and to other devices reliably and securely. With AWS IoT Core, your applications can keep track of and communicate with all your devices, all the time, even when they aren’t connected.</li>
+</ul>
+
+<h2 id="concepts-used-in-the-lab">Concepts Used in the lab</h2>
+
+<ul>
+<li><p><em>Message Broker</em> – Acts as a front door for your device to the AWS Cloud. The message broker exposes publish-and-subscribe messaging capabilities available for use by devices through transport protocols like MQTT, HTTP, and WebSocket.</p></li>
+
+<li><p><em>Rules Engine</em> – This is the point closest to the front door where your solution can make decisions about a device’s messages (for example, message filtering, routing messages to other services, and even a direct processing of messages in your solution). We will explore the facets of the rules engine in later posts.</p></li>
+
+<li><p><em>Device Shadow</em> – Sometimes referred to as a thing shadow, this is a logical representation of a physical device’s reported state or desired future state. Although the concept is a bit abstract, this building block provides a huge benefit for customers who build web- or mobile-based applications that need to interact with real devices at any scale. In later posts, we will explore the ways in which the device shadow is used in these interactions.</p></li>
+
+<li><p><em>AWS APIs and the AWS Management Console</em> – These are the mechanisms used to provision every AWS service. This post and all others in this series will include interaction with AWS through the APIs and AWS Management Console. In all Bites of IoT posts we assume you have an IAM user with developer-level permissions in an AWS account.</p></li>
+</ul>
+
+<p>So the relationships between these building blocks is:
+- AWS IoT has a message broker, rules engine, and device shadows.
+- AWS IoT is a part of the AWS Cloud.</p>
+
+<h2 id="lab-prerequisites">Lab Prerequisites</h2>
+
+<p>None.</p>
 
 <h2 id="expected-costs">Expected Costs</h2>
 
-<p>You are responsible for the cost of the AWS services used while running this lab. As of the date of publication, the baseline cost for running this solution as-is should be around 2-5 USD depending if you are not free tier eligible:</p>
+<p>The IoT Core service is free tier eligible.</p>
 
-<h2 id="tagging">Tagging</h2>
+<h2 id="lab-steps">Lab Steps</h2>
 
-<p>Cost Management advice: Whenever you are creating a cloud resource, tag it. Try setting following tag fields during the labs:
-    project: cloudbuildersday
-    costcenter: learning</p>
+<ol>
+<li>Make sure you are in the region you&rsquo;ve been working so far (e.g. Ireland region).</li>
+<li>Open the Amazon IoT Core service.</li>
+<li>Click <code>Learn</code> from the bottom left corner of the page.</li>
+
+<li><p>Select <code>See How AWS IoT Works</code> tutorial and watch the tutorial.</p>
+
+<p><img src="/images/labml/iot1iot1.png" alt="EB" /></p></li>
+
+<li><p>From the same page, this time select <code>Connect to AWS IoT</code> and click <code>Get Started</code></p></li>
+
+<li><p>Select <code>Configuring a Device</code>.</p></li>
+
+<li><p>Select <code>Linux</code> and <code>Python</code></p>
+
+<p><img src="/images/labml/iot1iot2.png" alt="EB" /></p></li>
+
+<li><p>Register a thing with a name (e.g. <code>cbd_smart_device</code>)</p>
+
+<p><img src="/images/labml/iot1iot3.png" alt="EB" /></p></li>
+
+<li><p>Based on the configuration a zip file will be generated (that is capable of running aws-iot-samples in github on a Linux platform via Pyhton. Download the file to your laptop</p>
+
+<p><img src="/images/labml/iot1iot5.png" alt="EB" /></p></li>
+
+<li><p>Now upload it to your Cloud9 IDE (Open Cloud9, from the manu, select <code>File -&gt; Upload a local file</code>)</p>
+
+<p><img src="/images/labml/iot1iot6.png" alt="EB" /></p></li>
+
+<li><p>Go to the terminal tab of Cloud9 and create a folder called <code>iot-kit</code> and then move the zip file you downloaded to here:</p>
+
+<pre><code>```sh
+    cd ~/
+    mkdir iot-kit
+    mv &lt;path-to&gt;/connect_dev_package.zip .
+```
+</code></pre></li>
+
+<li><p>As described in the instructions in the IoT Core page, unzip it, check what&rsquo;s inside, make the shell script executable and start the program (The author had a permission issue and therefore used the sudo command. You may want to check running ithout sudo as well)</p>
+
+<pre><code>```sh
+    unzip connect_dev_package.zip
+
+    chmod a+z start.sh
+    sudo ./start.sh
+```
+</code></pre></li>
+
+<li><p>The program installs the iot-samples from aws-labs at github: <a href="https://github.com/aws/aws-iot-device-sdk-python">https://github.com/aws/aws-iot-device-sdk-python</a> , downloads the certificates for securely communicating with IoT Core over MQTT.</p>
+
+<p><img src="/images/labml/iot1iot7.png" alt="EB" /></p></li>
+
+<li><p>The default program publishes<code>to a topic</code>sdk/test/Python` a message like below:</p>
+
+<pre><code>    {&quot;message&quot;: &quot;Hello World!&quot;, &quot;sequence&quot;: 228}
+</code></pre></li>
+
+<li><p>Now go to the AWS IoT console. Select <code>Test</code> from the bottom left menu.</p></li>
+
+<li><p>Select <code>subscribe to a topic</code> and enter <code>sdk/test/Python</code> in topic name. You should be seeing the messages received by the IoT Core.</p>
+
+<p><img src="/images/labml/iot1iot8.png" alt="EB" /></p></li>
+</ol>
+
+<h2 id="summary">Summary</h2>
+
+<p>Congratulations! You&rsquo;ve created a secure, scalable and serverless IoT communication between a simulated device and IoT Core. You can now take real-time action, do analytics, machine learning on the data ingested from billions of devices.</p>
+
+<h2 id="deleting-lab-resources">Deleting Lab Resources</h2>
+
+<p>Delete your IoT thing at the end of the lab.</p>
 
 
 <footer class=" footline" >
@@ -589,6 +688,8 @@
             
                 
                     
+                        
+                        
                     
                 
                 
@@ -602,26 +703,6 @@
             
             
                 
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -639,8 +720,21 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
-                        
+            
+            
+                
                     
                 
                 
@@ -805,6 +899,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -817,6 +912,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -833,6 +929,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -857,10 +956,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/overview/prerequisites/" title="Prerequisites"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/lab-ml/" title="Lab Module 4: Machine Learning in Practice"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/overview/cleanup/" title="Cleaning up Resources You&#39;ve Created" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/lab-ml/ml/" title="ML for Neural Networks based Handwriting Recognition" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
