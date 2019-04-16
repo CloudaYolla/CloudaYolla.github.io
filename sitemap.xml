@@ -23,7 +23,7 @@
   </url>
   
   <url>
-    <loc>https://cloudayolla.github.io/lab-wa/scalable-eb/</loc>
+    <loc>https://cloudayolla.github.io/lab-wa/ci-cd-eb/</loc>
     <lastmod>2019-04-15T17:58:18+03:00</lastmod>
   </url>
   
@@ -40,6 +40,11 @@
   <url>
     <loc>https://cloudayolla.github.io/lab-foundations/managed-sql-db/</loc>
     <lastmod>2019-03-29T17:59:04+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cloudayolla.github.io/lab-wa/asg-lb-eb/</loc>
+    <lastmod>2019-04-15T17:58:18+03:00</lastmod>
   </url>
   
   <url>
