@@ -49,7 +49,7 @@ Services Used in this Lab:  AWS CodeStar enables you to quickly develop, build, 
       <pubDate>Mon, 15 Apr 2019 17:58:18 +0300</pubDate>
       
       <guid>https://cloudayolla.github.io/lab-ml/ml/</guid>
-      <description>Train Machine Learning Model for Digit Recognition Objectives You willork with neural networks to build a model that will be able to recognize hand written digits.
+      <description>Objectives You willork with neural networks to build a model that will be able to recognize hand written digits.
 Services Used in this Lab:  *Amazon SageMaker: * Amazon SageMaker provides every developer and data scientist with the ability to build, train, and deploy machine learning models quickly. Amazon SageMaker is a fully-managed service that covers the entire machine learning workflow to label and prepare your data, choose an algorithm, train the algorithm, tune and optimize it for deployment, make predictions, and take action.</description>
     </item>
     
