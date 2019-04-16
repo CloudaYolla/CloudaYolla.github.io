@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Developing and Deploying Applications :: AWS Turkey Builders Day</title>
+    <title>Train Machine Learning Model for Digit Recognition :: AWS Turkey Builders Day</title>
 
     
     <link href="/css/nucleus.css?1555418095" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/lab-wa/ci-cd-eb/">
+  <body class="" data-url="/lab-ml/ml/">
     <nav id="sidebar" class="">
 
 
@@ -274,7 +274,7 @@
   
     
     <li data-nav-id="/lab-wa/" title="Lab Module 2: Designing Scalable, Cost Optimized Solutions" class="dd-item 
-        parent
+        
         
         
         ">
@@ -298,7 +298,7 @@
  
   
     
-      <li data-nav-id="/lab-wa/ci-cd-eb/" title="Developing and Deploying Applications" class="dd-item active">
+      <li data-nav-id="/lab-wa/ci-cd-eb/" title="Developing and Deploying Applications" class="dd-item ">
         <a href="/lab-wa/ci-cd-eb/">
         Developing and Deploying Applications
         
@@ -344,7 +344,7 @@
   
     
     <li data-nav-id="/lab-ml/" title="Lab Module 4: Machine Learning in Practice" class="dd-item 
-        
+        parent
         
         
         ">
@@ -368,7 +368,7 @@
  
   
     
-      <li data-nav-id="/lab-ml/ml/" title="Train Machine Learning Model for Digit Recognition" class="dd-item ">
+      <li data-nav-id="/lab-ml/ml/" title="Train Machine Learning Model for Digit Recognition" class="dd-item active">
         <a href="/lab-ml/ml/">
         Train Machine Learning Model for Digit Recognition
         
@@ -452,7 +452,7 @@
             
           
           
-            <a href='/'>Overview</a> > <a href='/lab-wa/'>Lab Module 2: Designing Scalable, Cost Optimized Solutions</a> > Developing and Deploying Applications
+            <a href='/'>Overview</a> > <a href='/lab-ml/'>Lab Module 4: Machine Learning in Practice</a> > Train Machine Learning Model for Digit Recognition
           
          
           
@@ -467,13 +467,14 @@
     <div class="wrapper">
 <nav id="TableOfContents">
 <ul>
-<li>
+<li><a href="#train-machine-learning-model-for-digit-recognition">Train Machine Learning Model for Digit Recognition</a>
 <ul>
 <li><a href="#objectives">Objectives</a></li>
 <li><a href="#services-used-in-this-lab">Services Used in this Lab:</a></li>
 <li><a href="#lab-prerequisites">Lab Prerequisites</a></li>
 <li><a href="#expected-costs">Expected Costs</a></li>
 <li><a href="#lab-steps">Lab Steps</a></li>
+<li><a href="#bonus-labs">Bonus Labs</a></li>
 <li><a href="#summary">Summary</a></li>
 <li><a href="#deleting-lab-resources">Deleting Lab Resources</a></li>
 </ul></li>
@@ -494,7 +495,7 @@
           
             <h1>
               
-              Developing and Deploying Applications
+              Train Machine Learning Model for Digit Recognition
             </h1>
           
 
@@ -504,34 +505,43 @@
 
 
 
+<h1 id="train-machine-learning-model-for-digit-recognition">Train Machine Learning Model for Digit Recognition</h1>
+
 <h2 id="objectives">Objectives</h2>
 
-<p>In this lab you will quickly develop, build, and deploy an applications on AWS.</p>
+<p>You willork with neural networks to build a model that will be able to recognize hand written digits.</p>
 
 <h2 id="services-used-in-this-lab">Services Used in this Lab:</h2>
 
 <ul>
-<li><p><em>AWS CodeStar</em> enables you to quickly develop, build, and deploy applications on AWS. AWS CodeStar provides a unified user interface, enabling you to easily manage your software development activities in one place.</p>
+<li>*Amazon SageMaker: * Amazon SageMaker provides every developer and data scientist with the ability to build, train, and deploy machine learning models quickly. Amazon SageMaker is a fully-managed service that covers the entire machine learning workflow to label and prepare your data, choose an algorithm, train the algorithm, tune and optimize it for deployment, make predictions, and take action. Your models get to production faster with much less effort and lower cost.  <a href="https://aws.amazon.com/sagemaker/">https://aws.amazon.com/sagemaker/</a>
 
 <ul>
-<li>With AWS CodeStar, you can set up your entire continuous delivery toolchain in minutes, allowing you to start releasing code faster. AWS CodeStar makes it easy for your whole team to work together securely, allowing you to easily manage access and add owners, contributors, and viewers to your projects.</li>
-<li>Each AWS CodeStar project comes with a project management dashboard, including an integrated issue tracking capability powered by Atlassian JIRA Software. With the AWS CodeStar project dashboard, you can easily track progress across your entire software development process, from your backlog of work items to teams’ recent code deployments.</li>
-<li>There is no additional charge for using AWS CodeStar.</li>
-<li>Templates: You can choose from a variety of AWS CodeStar templates for Amazon EC2, AWS Lambda, and AWS Elastic Beanstalk.</li>
-<li>Repo: You have the option to choose AWS CodeCommit or GitHub to use as your project’s source control.</li>
-<li>IDE: You also have the option to edit your source code using one of several options including AWS Cloud9, Microsoft Visual Studio, or Eclipse.</li>
-<li>Languages: AWS CodeStar project templates include the code for getting started on supported programming languages including Java, JavaScript, PHP, Ruby, C#, and Python.</li>
-</ul></li>
-
-<li><p><em>AWS Elastic Beanstalk</em> is an easy-to-use service for deploying and scaling web applications and services developed with Java, .NET, PHP, Node.js, Python, Ruby, Go, and Docker on familiar servers such as Apache, Nginx, Passenger, and IIS.</p>
+<li>BUILD
 
 <ul>
-<li>Upload your code and Elastic Beanstalk automatically handles the deployment, from capacity provisioning, load balancing, auto-scaling to application health monitoring.</li>
-<li>You retain full control over the AWS resources powering your application and can access the underlying resources at any time.</li>
-<li>There is no additional charge for Elastic Beanstalk</li>
+<li>Collect &amp; prepare training data</li>
+<li>Data labeling &amp; pre-built notebooks for common problems</li>
+<li>Choose &amp; optimize your ML algorithm</li>
+<li>Model &amp; algorithm marketplace &amp; built-in, high-performance algorithms</li>
 </ul></li>
+<li>TRAIN
 
-<li><p><em>AWS CodeCommit</em> is a fully-managed source control service that hosts secure and scalable Git-based repositories.</p></li>
+<ul>
+<li>Setup &amp; manage environments for training</li>
+<li>One-click training on the highest performing infrastructure</li>
+<li>Train &amp; tune model</li>
+<li>Train once, run anywhere &amp; model optimization</li>
+</ul></li>
+<li>DEPLOY
+
+<ul>
+<li>Deploy model in production</li>
+<li>One-click deployment</li>
+<li>Scale &amp; manage the production environment</li>
+<li>Fully managed with auto-scaling for 75% less</li>
+</ul></li>
+</ul></li>
 </ul>
 
 <h2 id="lab-prerequisites">Lab Prerequisites</h2>
@@ -540,101 +550,56 @@
 
 <h2 id="expected-costs">Expected Costs</h2>
 
-<p>The EC2 used in the labs is free tier eligible.</p>
+<p>The SageMaker service is free tier eligible.</p>
 
 <h2 id="lab-steps">Lab Steps</h2>
 
 <ol>
-<li><p>Go to AWS Console and Open CodeStar. Filter our &lsquo;Elastic Beanstalk&rsquo; services and select &lsquo;Python - Flask&rsquo; template</p>
+<li>Make sure you are in the region you&rsquo;ve been working so far (e.g. Ireland region).</li>
+<li>Open the Amazon SageMaker service.</li>
+<li>Select the Create notebook instance button.</li>
+<li>Provide a name for your instance. For example: CloudyAI</li>
+<li>In the IAM Role section, create a new IAM role for your notebook.</li>
+<li>Select the Create notebook instance button. It will take about 15 minutes for your instances to be ready.</li>
+<li>When your notebook is in the InService state, select the Open button.</li>
+<li>Open the sample-notebooks / sagemaker-python-sdk / mxnet_gluon_mnist directory.</li>
 
-<p><img src="/images/labwa/eb1codestar.png" alt="EB" /></p></li>
+<li><p>Open the mnist_with_gluon.ipynb file.</p>
 
-<li><p>Give your project a name such as <code>cbd-eb-flask</code> and select <code>CodeCommit</code> as repo</p>
+<p><img src="/images/labml/ml1ml1.png" alt="EB" /></p></li>
 
-<p><img src="/images/labwa/eb1eb2.png" alt="EB" /></p></li>
+<li><p>Go through each step of the document by selecting Run button.</p></li>
 
-<li><p>Review project details. Understand how different AWS services are positioned at different stages of software development life cycle (SDLC)</p>
+<li><p>The longest step will be the learning/teaching model.</p>
 
-<p><img src="/images/labwa/eb1eb3.png" alt="EB" /></p></li>
+<p><img src="/images/labml/ml1ml2.png" alt="EB" /></p></li>
 
-<li><p>Select the keypair you created in the beginning of the workshop <a href="/overview/prerequisites/">Prerequisites</a></p>
+<li><p>When the model will be ready and deployed, you can test it in the browser by writing some digits.</p>
 
-<p><img src="/images/labwa/eb1eb4kp.png" alt="EB" /></p></li>
+<p><img src="/images/labml/ml1ml3.png" alt="EB" /></p></li>
+</ol>
 
-<li><p>Pick the Cloud9 IDE (This will create another Cloud9 IDE)</p>
+<h2 id="bonus-labs">Bonus Labs</h2>
 
-<p><img src="/images/labwa/eb1eb5.png" alt="EB" /></p></li>
+<p>Here are some other resources for you:</p>
 
-<li><p>You are done. Wait for the environment to be ready.</p>
+<ol>
+<li>Full day SageMaker Workshop:
 
-<p><img src="/images/labwa/eb1eb6.png" alt="EB" /></p>
-
-<p><img src="/images/labwa/eb1eb7.png" alt="EB" /></p></li>
-
-<li><p>The source code repo commit triggers a build and deployment process.</p>
-
-<p><img src="/images/labwa/Picture8.png" alt="EB" /></p></li>
-
-<li><p>Explore CodeCommit service</p>
-
-<p><img src="/images/labwa/eb1eb9cc.png" alt="EB" /></p></li>
-
-<li><p>Explore CodeBuild service.</p>
-
-<p><img src="/images/labwa/eb1eb92.png" alt="EB" /></p></li>
-
-<li><p>CodeBuild uses S3 to store bundles</p>
-
-<p><img src="/images/labwa/eb1eb93.png" alt="EB" /></p></li>
-
-<li><p>You can access logs from the build process</p>
-
-<p><img src="/images/labwa/eb1eb94.png" alt="EB" /></p></li>
-
-<li><p>In the backend, CloudFormation service is used to create all the resources for your scalable web app.</p>
-
-<p><img src="/images/labwa/eb1eb95.png" alt="EB" /></p></li>
-
-<li><p>Finally, your web application is ready.</p>
-
-<p><img src="/images/labwa/eb1eb96.png" alt="EB" /></p></li>
-
-<li><p>The DNS is also provisioned for the web app.</p>
-
-<p><img src="/images/labwa/eb1eb97w.png" alt="EB" /></p></li>
-
-<li><p>Let&rsquo;s look at the Elastic Beanstalk (EB) configuration. Observe that this is just a single node, non-scalable web app. One can think of it as a dev environment.</p>
-
-<p><img src="/images/labwa/eb1eb98.png" alt="EB" /></p></li>
-
-<li><p>EB simplifies access to underlying services (EC2, ELB, CloudWatch etc.). Go to Logs section and download the recent log files without logging in the server.</p>
-
-<p><img src="/images/labwa/eb1eb99.png" alt="EB" /></p>
-
-<p><img src="/images/labwa/eb1eb991.png" alt="EB" /></p></li>
-
-<li><p>Check the Health section and observe the health state of the instance.</p>
-
-<p><img src="/images/labwa/eb1eb992.png" alt="EB" /></p></li>
-
-<li><p>Check Monitoring section and get a grip on various performance parameters.</p>
-
-<p><img src="/images/labwa/eb1eb993.png" alt="EB" /></p></li>
-
-<li><p>Check the events occurred.</p>
-
-<p><img src="/images/labwa/eb1eb994.png" alt="EB" /></p></li>
+<ul>
+<li>Agenda: <a href="https://s3.amazonaws.com/sagemaker-workshop/index.html">https://s3.amazonaws.com/sagemaker-workshop/index.html</a></li>
+<li>Lab Instructions: <a href="https://sagemaker-workshop.com/">https://sagemaker-workshop.com/</a> You’ll start by creating a SageMaker notebook instance with the required permissions. You will then interact with SageMaker via sample Jupyter notebooks, the AWS CLI, the SageMaker console, or all three. During the workshop, you’ll explore various data sets, create model training jobs using SageMaker’s hosted training feature, and create endpoints to serve predictions from your models using SageMaker’s hosted endpoint feature.</li>
+</ul></li>
+<li>SageMaker Intro Workshop (in Turkish): <a href="https://github.com/barisyasin/sagemaker-intro-tr">https://github.com/barisyasin/sagemaker-intro-tr</a></li>
 </ol>
 
 <h2 id="summary">Summary</h2>
 
-<p>Congratulations! You&rsquo;ve created a full CI/CD pipeline and deployed your web application to cloud.</p>
+<p>Congratulations! You&rsquo;ve applied an image recognition ML algorithm using an open source framework (Gluon) without worrying about the infrastructure.</p>
 
 <h2 id="deleting-lab-resources">Deleting Lab Resources</h2>
 
-<p>We will this environment in the next lab. Please continue to the next lab.</p>
-
-<p>Otherwise terminate your EB, Cloud9 and CodeStar project resources.</p>
+<p>Terminate your SageMaker notebook instance.</p>
 
 
 <footer class=" footline" >
@@ -820,7 +785,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -833,7 +797,6 @@
             
             
                 
-                    
                     
                 
                 
@@ -850,9 +813,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -873,6 +833,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -885,6 +846,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -909,10 +871,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/lab-wa/" title="Lab Module 2: Designing Scalable, Cost Optimized Solutions"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/lab-ml/" title="Lab Module 4: Machine Learning in Practice"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/lab-wa/asg-lb-eb/" title="Deploying a Scalable Web Application to Production" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/overview/" title="Overview" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
