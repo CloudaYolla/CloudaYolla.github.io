@@ -33,6 +33,17 @@ AWS Account  AWS Identity and Access Management (IAM) - AWS Identity and Access 
     </item>
     
     <item>
+      <title>Deploying a Scalable Web Application</title>
+      <link>https://cloudayolla.github.io/lab-wa/scalable-eb/</link>
+      <pubDate>Mon, 15 Apr 2019 17:58:18 +0300</pubDate>
+      
+      <guid>https://cloudayolla.github.io/lab-wa/scalable-eb/</guid>
+      <description>Objectives In this lab you will quickly develop, build, and deploy an applications on AWS.
+Services Used in this Lab:  AWS CodeStar enables you to quickly develop, build, and deploy applications on AWS. AWS CodeStar provides a unified user interface, enabling you to easily manage your software development activities in one place.
+ With AWS CodeStar, you can set up your entire continuous delivery toolchain in minutes, allowing you to start releasing code faster.</description>
+    </item>
+    
+    <item>
       <title>Creating a Virtual DC and placing a Cloud Server</title>
       <link>https://cloudayolla.github.io/lab-foundations/virtual-dc-and-server/</link>
       <pubDate>Fri, 29 Mar 2019 17:58:18 +0300</pubDate>
